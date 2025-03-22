@@ -31,10 +31,6 @@ jaci.string("string : ", { required: false })
     })
     .then((res) => {
         console.log(res);
-        return jaci.select("What do you like ", { options: { rabbit: "R", cat: "C" } })
-    })
-    .then((res) => {
-        console.log(res);
         jaci.done();
         return;
     })

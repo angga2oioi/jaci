@@ -163,9 +163,9 @@ const jaci = () => {
     const ask = (q, c, cb) => {
         const stdin = process.openStdin();
         if (c?.type === "select") {
-            q = q + ` ` + Object.keys(c?.options)?.map((n) => {
+            q = q + `\n` + Object.keys(c?.options)?.map((n) => {
                 return `(${c?.options?.[n]})${n}`
-            })?.join(" ")
+            })?.join(" ") + "\n"
         }
         const onDataHandler = (char) => {
             char = char + '';
